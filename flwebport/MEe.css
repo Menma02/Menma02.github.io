@@ -9,17 +9,16 @@ body{
     padding: 0; /
 }
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
-    color: rgb(255, 255, 255);
-    display:inline-block;
-    font-size: 30px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 250px;
-    transition: transform 0.5s ease;
+iframe{
+    position: absolute;
+    margin-left: 150px;
+    top: 0px;
+    margin-top: -30px;
 }
 ul{
     color: yellow;
@@ -32,10 +31,10 @@ ul{
     margin: 10px; 
     padding-top: 10px;
 }
-.logo:hover{
+a:hover{
     color: #eca728;
     cursor: pointer;
-    transform: scale(1.1);  
+    transform: scale(1.1);
 }
 .navbar > li{
     list-style-type: none;
@@ -81,6 +80,7 @@ span2{
 }
 .welcome{
     margin-top: 140px;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 span{
     font-size: 30px;
@@ -170,6 +170,7 @@ li1 > a {
     transform: scale(1.5); 
     transition: box-shadow 0.3s ease; 
     box-shadow: 15px black;
+    transition: transform 0.3s ease;
 }
 .fa-facebook {
     color: rgb(254, 254, 254);
@@ -196,6 +197,55 @@ li1 > a {
     color:rgb(0, 0, 0);
 }
 
+.callout {
+    position: absolute;
+    top: 480px;
+    bottom: 35px;
+    right: 20px;
+    width: 20%;
+    height: 100px;
+  }
+  
+  .callout-header {
+    padding: 15px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #555;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 8px 8px 0 0;
+    border: 2px solid black;
+  }
+  
+  .callout-container {
+    background-color: #fff9f9;
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 0px 0px 3px 3px;
+  }
+  .callout-container p{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+.callout-container p10{
+    color:#d28800;
+    font-size: 23px;
+}
+  .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .closebtn:hover {
+    color: rgb(0, 0, 0);
+  }
 
 /* WORKS CSS */
 
@@ -209,7 +259,7 @@ li1 > a {
     height: 880px;
 }
 
-h1{
+.aboutcontainer h1{
     color: #ffffff;
     font-size: 40px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -288,12 +338,14 @@ h1{
   margin-left: 135px;
   margin-top: 13px;
   float: left;
+  text-shadow: 5px 5px 8px rgb(0, 0, 0);
  
 }
 .responsive1 {
     position: absolute;
     left: 595px;
     margin-top: 518px;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 .responsive{
@@ -345,6 +397,7 @@ marquee{
     padding-top: 7px;
     color: #eca728;
     font-weight: bold;
+    text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 .info h5{
@@ -362,7 +415,7 @@ marquee{
     margin-left: 650px;
     border: 1px solid #000000;
     border-radius: 10px;
-    box-shadow: 3px 3px 20px #000;
+    box-shadow: 3px 3px 10px #000;
     font-size: 23px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -486,7 +539,7 @@ span3{
     width: 550px;
     height: 350px;
     background-color: rgb(255, 255, 255);
-    -webkit-box-shadow: 3px 3px 20px #000;
+    -webkit-box-shadow: 3px 3px 10px #000;
     -webkit-transform: preserve-3d;
     -ms-transform: preserve-3d;
     transform: preserve-3d;
@@ -517,7 +570,7 @@ span3{
     -webkit-transform-origin: 0;
     -ms-transform-origin: 0;
     transform-origin: 0;
-    -webkit-box-shadow: 3px 3px 20px #000;
+    -webkit-box-shadow: 3px 3px 3px #000;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
