@@ -1,0 +1,31 @@
+
+.card_container{
+    width: 90%;
+    border-radius: 15px;  
+    background-color: white;
+    box-shadow: 0 3px 12px 6px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: 20px;
+}
+.card1{
+    background-color: #FFAB2E;
+    font-weight: bold;
+    padding: 50px 40px;
+    margin: 20px;
+    border-radius: 8px;
+}
+.card2{
+    background-color: #1B5374;
+    font-weight: bold;
+    padding: 50px 40px;
+    margin: 20px;
+    border-radius: 8px;
+}
+.card3{
+    background-color: #CECECE;
+    font-weight: bold;
+    padding: 50px 40px;
+    margin: 20px;
+    border-radius: 8px;
+}
