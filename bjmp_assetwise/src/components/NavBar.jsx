@@ -1,8 +1,9 @@
+// src/components/NavBar.jsx
 import { useState } from 'react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import { CiMenuFries } from 'react-icons/ci';
-import logoImg from '../images/logoImg.png';
+import logoImg from '../images/aw_logo.png';
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
@@ -16,11 +17,11 @@ const NavBar = () => {
   };
 
   const navItems = [
-    { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
-    { name: 'Services', to: 'services' },
-    { name: 'Contact', to: 'contact' },
-    { name: 'LOGIN', to: 'login' },
+    { name: 'Home', to: '/' },
+    { name: 'About', to: '/about' },
+    { name: 'Services', to: '/services' },
+    { name: 'Contact', to: '/contact' },
+    { name: 'LOGIN', to: '/login' },
   ];
 
   const content = (
@@ -35,9 +36,7 @@ const NavBar = () => {
           >
             <Link
               to={item.to}
-              smooth
-              duration={500}
-              onSetActive={() => handleSetActive(item.name)}
+              onClick={() => handleSetActive(item.name)}
             >
               {item.name}
             </Link>
@@ -68,9 +67,7 @@ const NavBar = () => {
                 >
                   <Link
                     to={item.to}
-                    smooth
-                    duration={500}
-                    onSetActive={() => handleSetActive(item.name)}
+                    onClick={() => handleSetActive(item.name)}
                   >
                     {item.name}
                   </Link>
