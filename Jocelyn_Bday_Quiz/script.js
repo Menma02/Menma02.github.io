@@ -31,7 +31,7 @@ let participantName = "";
 function startQuiz() {
     participantName = document.getElementById('participant-name').value;
     if (!participantName) {
-        alert("Please enter your name before starting the quiz.");
+        alert("PLEASE ENTER YOUR NAME BEFORE STARTING THE QUIZ.");
         return;
     }
     document.getElementById('instructions').style.display = 'none';
