@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Website Icon" href="images/icon.png" type="png">
+  <title>Jocelyn's Birthday Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="spinner"></div>
+  </div>
+  <div id="quiz-container" style="display: none;">
+    <div id="instructions">
+      <h1>Welcome to <span1>Jocelyn's</span1> <br> Birthday Quiz!</h1>
+      <p>You will have <span3>20 seconds</span3> to answer each question.</p>
+      <p>Don't forget to take a <span2>SCREENSHOT</span2> of your score.</p>
+      <p>Try to answer as many as you can correctly.<br><br>GOOD LUCK!</p>
+      <input type="text" id="participant-name" placeholder="Enter your name">
+      <button onclick="startQuiz()" class="start_button">Start Quiz</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+      <div id="timer">Time left: <span id="time">20</span>s</div>
+      <div id="question-counter">Question <span id="current-question">1</span> of <span id="total-questions">1</span></div>
+      <div id="question"></div>
+      <div id="choices"></div>
+      <button id="next-button" onclick="nextQuestion()" style="display: none;">Next Question</button>
+    </div>
+
+    <div id="result" style="display: none;">
+      <h1 style="color: #ff69b4;">Congratulations!</h1>
+      <p>You have completed the quiz.</p>
+      <p>Your score: <span id="score"></span></p>
+      <p>Thank you for participating, <span id="participant-name-result"></span>!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
