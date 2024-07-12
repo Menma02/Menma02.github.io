@@ -27,7 +27,7 @@ const questions = [
     {
         question: "What was Auntie's first pet?",
         choices: ["Nash(Cat)", "Andeng(Dog)", "Libbys(Cat)", "Kenken(Cat)"],
-        answer: "Nash(cat)"
+        answer: "Nash(Cat)"
     },
     {
         question: "Who is Auntie's favorite (Local) male star?",
@@ -158,7 +158,7 @@ function showResult() {
     } else if (score >= 5 && score <= 9) {
         message = "Galingan mo next time, Well done!👌";
     } else if (score >= 10 && score <= 14) {
-        message = "Galing naman, Congratulations!🥳";
+        message = "Galing mo naman, Congratulations!🥳";
     }
     
     document.getElementById('result-message').innerText = message;
