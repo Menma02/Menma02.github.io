@@ -1,19 +1,75 @@
 const questions = [
     {
-      question: "What is Auntie's favorite color?",
-      choices: ["Red", "Blue", "Green", "Yellow"],
-      answer: "Blue"
+        question: "What is Auntie's favorite color?",
+        choices: ["Purple", "Pink", "Green", "Yellow"],
+        answer: "Pink"
     },
     {
-      question: "What is Auntie's favorite food?",
-      choices: ["Pizza", "Pasta", "Sushi", "Salad"],
-      answer: "Sushi"
+        question: "What is Auntie's favorite food?",
+        choices: ["Munggo", "Adobong Manok", "Sinigang na Baboy", "Pakbet"],
+        answer: "Munggo"
     },
     {
-      question: "Where was Auntie born?",
-      choices: ["New York", "Los Angeles", "Chicago", "Houston"],
-      answer: "Chicago"
+        question: "Where was Auntie born?",
+        choices: ["Manila St. Rita Hospital", "Santa Ana Hospital", "Plaridel County Hospital", "Melvery Maternity & General Hospital"],
+        answer: "Manila St. Rita Hospital"
     },
+    {
+        question: "What is Auntie's favorite quote or saying?",
+        choices: ["You only live once", "Life is short", "Time is gold", "It is never too late to be what you might have been"],
+        answer: "Life is short"
+    },
+    {
+        question: "What was Auntie's first dream in life?",
+        choices: ["To become a midwife", "To have a successful business", "To become a Flight attendant", "To have her own house"],
+        answer: "To have her own house"
+    },
+    {
+        question: "What was Auntie's first pet?",
+        choices: ["Nash(Cat)", "Andeng(Dog)", "Libbys(Cat)", "Kenken(Cat)"],
+        answer: "Nash(cat)"
+    },
+    {
+        question: "Who is Auntie's favorite (Local) male star?",
+        choices: ["Gabby Concepcion", "Dingdong Dantes", "Aga Muhlach", "Albert Martinez"],
+        answer: "Gabby Concepcion"
+    },
+    {
+        question: "Who is Auntie's favorite (International) male star?",
+        choices: ["Leonardo DiCaprio", "Denzel Washington", "Brad Pitt", "Jackie Chan"],
+        answer: "Jackie Chan"
+    },
+    {
+        question: "What is Auntie's favorite movie of all time",
+        choices: ["Parasite", "Cast Away", "Titanic", " Ratatouille"],
+        answer: "Titanic"
+    },
+    {
+        question: "How much is her First receive salary",
+        choices: ["₱60,000", "₱25,000", "₱100,000", "₱5,000"],
+        answer: "₱100,000"
+    },
+    {
+        question: "What is Auntie's favorite song to sing along to?",
+        choices: ["Always remember us this way - Lady Gaga", "I Will Always Love You - Whitney Houston", "Tears in Heaven - Eric Clapton", "Baby One More Time - Britney Spears"],
+        answer: "Always remember us this way - Lady Gaga"
+    },
+    {
+        question: "What is Auntie's favorite hobby or pastime?",
+        choices: ["Playing games", "Watching movies", "Eating foods", "Make a videos for tiktok or fb reels"],
+        answer: "Playing games"
+    },
+    {
+        question: "What is Auntie's favorite movie?",
+        choices: ["The BFG", "The Notebook", "Forrest Gump", "Coco"],
+        answer: "The Notebook"
+    },
+    {
+        question: "What is Auntie's favorite type of fruit to snack on?",
+        choices: ["Cherry", "Grapes", "Mango", "Pineapple"],
+        answer: "Cherry"
+    },
+    
     // Add more questions as needed
 ];
 
@@ -23,10 +79,10 @@ let timer;
 let timeLeft = 20;
 let participantName = "";
 
-    setTimeout(() => {
-        document.getElementById('loading-screen').style.display = 'none'; // Hide the loading screen
-        document.getElementById('quiz-container').style.display = 'block'; // Show quiz container
-    }, 5000); // Optional delay before hiding loading screen // Adjust the timeout duration as needed
+setTimeout(() => {
+    document.getElementById('loading-screen').style.display = 'none'; // Hide the loading screen
+    document.getElementById('quiz-container').style.display = 'block'; // Show quiz container
+}, 5000); // Optional delay before hiding loading screen // Adjust the timeout duration as needed
 
 function startQuiz() {
     participantName = document.getElementById('participant-name').value;
@@ -93,4 +149,17 @@ function showResult() {
     document.getElementById('result').style.display = 'block';
     document.getElementById('score').innerText = `${score} out of ${questions.length}`;
     document.getElementById('participant-name-result').innerText = participantName;
+
+    let message = "";
+    if (score === 0) {
+        message = "ANO BAYAN! Parang hindi kamag-anak😢";
+    } else if (score >= 1 && score <= 4) {
+        message = "Wala kang gift sa pasko, Hays...🤦‍♂️";
+    } else if (score >= 5 && score <= 9) {
+        message = "Galingan mo next time, Well done!👌";
+    } else if (score >= 10 && score <= 14) {
+        message = "Galing naman, Congratulations!🥳";
+    }
+    
+    document.getElementById('result-message').innerText = message;
 }
