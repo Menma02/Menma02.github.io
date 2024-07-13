@@ -46,7 +46,7 @@ const questions = [
     },
     {
         question: "How much is her First receive salary",
-        choices: ["₱60,000", "₱25,000", "₱100,000", "₱5,000"],
+        choices: ["₱60,000", "₱75,000", "₱100,000", "₱95,000"],
         answer: "₱100,000"
     },
     {
@@ -69,7 +69,31 @@ const questions = [
         choices: ["Cherry", "Grapes", "Mango", "Pineapple"],
         answer: "Cherry"
     },
-    
+    {
+        question: "What is Auntie's contact number?",
+        choices: ["0917-458-8542", "0919-359-7243", "0991-539-7243", "0919-359-7343"],
+        answer: "0919-359-7243"
+    },    
+    {
+        question: "How many cats has Auntie had as pets?",
+        choices: ["9", "11", "10", "13"],
+        answer: "11"
+    },
+    {
+        question: "What is her weight now?",
+        choices: ["87", "85", "82", "83"],
+        answer: "82"
+    },
+    {
+        question: "What is her waist line now?",
+        choices: ["33", "36", "32", "34"],
+        answer: "34"
+    },
+    {
+        question: "What food does she dislike or hate the most?",
+        choices: ["Dinakdakan", "Dinuguan", "Pinakbet", "Ginisang Ampalaya", "Adobong atay at balunbalunan", "Chicken Curry"],
+        answer: "Dinuguan"
+    },
     // Add more questions as needed
 ];
 
@@ -155,9 +179,9 @@ function showResult() {
         message = "ANO BAYAN! Parang hindi kamag-anak😢";
     } else if (score >= 1 && score <= 4) {
         message = "Wala kang gift sa pasko, Hays...🤦‍♂️";
-    } else if (score >= 5 && score <= 9) {
+    } else if (score >= 5 && score <= 11) {
         message = "Galingan mo next time, Well done!👌";
-    } else if (score >= 10 && score <= 14) {
+    } else if (score >= 12 && score <= 19) {
         message = "Galing mo naman, Congratulations!🥳";
     }
     
