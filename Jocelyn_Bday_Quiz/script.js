@@ -108,14 +108,15 @@ setTimeout(() => {
     document.getElementById('quiz-container').style.display = 'block'; // Show quiz container
 }, 5000); // Optional delay before hiding loading screen // Adjust the timeout duration as needed
 
+
 function startQuiz() {
-    const participantName = document.getElementById('participant-name').value;
+    participantName = document.getElementById('participant-name').value;
     if (!participantName) {
         alert("PLEASE ENTER YOUR NAME BEFORE STARTING THE QUIZ.");
         return;
     }
 
-    // Start playing background music
+    // Start playing background music and ensure it loops
     const backgroundMusic = document.getElementById('background-music');
     backgroundMusic.play();
 
