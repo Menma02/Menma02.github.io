@@ -109,17 +109,26 @@ setTimeout(() => {
 }, 5000); // Optional delay before hiding loading screen // Adjust the timeout duration as needed
 
 function startQuiz() {
-    participantName = document.getElementById('participant-name').value;
+    const participantName = document.getElementById('participant-name').value;
     if (!participantName) {
         alert("PLEASE ENTER YOUR NAME BEFORE STARTING THE QUIZ.");
         return;
     }
+
+    // Start playing background music
+    const backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.play();
+
+    // Hide instructions and show quiz
     document.getElementById('instructions').style.display = 'none';
     document.getElementById('quiz').style.display = 'block';
     document.getElementById('total-questions').innerText = questions.length;
+
+    // Show first question
     showQuestion();
     startTimer();
 }
+
 
 function startTimer() {
     timer = setInterval(() => {

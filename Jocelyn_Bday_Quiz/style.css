@@ -149,7 +149,8 @@ body {
   #next-button:hover {
     background-color: #ff69b4;
   }
-  
+
+
   @media (max-width: 768px) {
     #quiz-container {
       width: 90%;
