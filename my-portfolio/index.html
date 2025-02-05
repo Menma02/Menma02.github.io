@@ -51,11 +51,15 @@
     <section id="home">
         <div class="hero-container">
             <div class="welcome-container">
-                <h2>Welcome<span>,</span> I'm Mark June!</h2>
-                <p><span>Inspiring</span> Web Designer and Web Developer</p>    
-                <div class="resume-container">
-                    <a href="https://menma02.github.io/my-resume/" target="_blank" rel="noopener">My Resume</a>
-                </div>
+                <h2>Welcome<span>,</span> I'm</h2>
+                <h2 class="my-name">Mark June Santiago</h2>
+                <p><span>Inspiring</span> Web Designer and Web Developer</p>   
+                 
+                <a href="./files/my-resume.pdf" download="MarkJune-D-Santiago(Resume).pdf">
+                  <button class="resume-btn">
+                      <i class="fa fa-download" style="color:#EEEEEE;"></i> My Resume </button>
+              </a>
+              
             </div>
         </div>
     </section>
@@ -65,7 +69,8 @@
     <section id="about">
         <div class="about-container">
             <div class="about-img">
-                <img src="./img/MARKJUNE.png" alt="Mark June" width="200px">
+                <div class="circle-shape"></div>
+                <img src="./img/MARKJUNE.png" alt="Mark June" width="300px">
             </div>
             <div class="about-desc">
                 <h2>About <span>Me</span></h2>
@@ -79,63 +84,117 @@
 
     <!-- Project -->
     <section id="project">
-        <div class="project-container">
-            <h3><span>My</span> Project</h3>
-            <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" rel="noopener" href="https://menma02.github.io/Jocelyn_Bday_Quiz/">
-                    <img src="./img/proj1.png" alt="Cinque Terre">
-                  </a>
-                  <div class="desc">
-                    <h4>Birthday Quiz</h4>
-                    <p>A fun and interactive birthday quiz website created for my aunt.
-                        It showcases all her favorite things through engaging questions. Built using HTML, CSS, 
-                        and JavaScript.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" rel="noopener" href="https://menma02.github.io/myflwebport/index.html">
-                    <img src="./img/proj2.png" alt="Forest">
-                  </a>
-                  <div class="desc">
-                    <h4>FL Portfolio</h4>
-                    <p>A project website for my Foreign Language subject, serving as a repository 
-                        for all my class activities and assignments. Developed with HTML, CSS, and JavaScript. </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" rel="noopener" href="https://menma02.github.io/my-resume/">
-                    <img src="./img/proj3.png" alt="Northern Lights">
-                  </a>
-                  <div class="desc">
-                    <h4>My Resume</h4>
-                    <p>A personal resume website I created during my internship at Accenture PH. 
-                        It highlights my skills, experiences, and projects. Built using HTML, CSS, and JavaScript.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" rel="noopener" href="https://assetwise.website/">
-                    <img src="./img/proj5.png" alt="Mountains">
-                  </a>
-                  <div class="desc">
-                    <h4>AssetWise</h4>
-                    <p>Our capstone project for BJMP Region 3, designed for property record management and tracking.
-                        I handled the front-end using React.js & Tailwind CSS, we used MySQL & Laravel for back-end.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="clearfix"></div>
+      <div class="project-container">
+        <h3><span>My</span> Projects</h3>
+    
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('academic', this)">Academic Projects</button>
+            <button class="tab-btn" onclick="openTab('self', this)">Self Projects</button>
+            <button class="tab-btn" onclick="openTab('designs', this)">Figma Designs</button>
         </div>
+    
+        <!-- Academic Projects -->
+        <div id="academic" class="tab-content active">
+            <div class="card-container">
+                <div class="card">
+                    <a href="https://menma02.github.io/myflwebport/" target="_blank" rel="noopener">
+                        <img src="./img/proj2.png" alt="FL Web Portfolio">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">FL Web Portfolio</div>
+                        <div class="card-desc">A project website for my Foreign Language subject, serving as a repository 
+                            for all my class activities and assignments. Developed with HTML, CSS, and JavaScript.</div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="https://assetwise.website/" target="_blank" rel="noopener">
+                        <img src="./img/proj5.png" alt="AssetWise">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">AssetWise</div>
+                        <div class="card-desc">Our capstone project for BJMP Region 3, designed for property record management and tracking.
+                            I handled the front-end using React.js & Tailwind CSS, we used MySQL & Laravel for back-end.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Self Projects -->
+        <div id="self" class="tab-content">
+            <div class="card-container">
+                <div class="card">
+                    <a href="https://menma02.github.io/Jocelyn_Bday_Quiz/" target="_blank" rel="noopener">
+                        <img src="./img/proj1.png" alt="Birthday Quiz">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">Birthday Quiz</div>
+                        <div class="card-desc">A fun and interactive birthday quiz website created for my aunt.
+                            It showcases all her favorite things through engaging questions. Built using HTML, CSS, 
+                            and JavaScript.</div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="https://menma02.github.io/my-resume/" target="_blank" rel="noopener">
+                        <img src="./img/proj3.png" alt="My Resume">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">My Resume</div>
+                        <div class="card-desc">A personal resume website I created during my internship at Accenture PH. 
+                        It highlights my skills, experiences, and projects. Built using HTML, CSS, and JavaScript.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Figma Designs -->
+        <div id="designs" class="tab-content">
+            <div class="card-container">
+                <div class="card">
+                    <a href="https://www.figma.com/design/ZMRHuFup3FnxDRIHqGJapl/Class-Hive?node-id=0-1&t=xO0GO7hw27ANq3q2-1" target="_blank" rel="noopener">
+                        <img src="./img/classhive.png" alt="ClassHive">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">ClassHive</div>
+                        <div class="card-desc">Is a quiz web application where teachers can manage creating quizzes and assign them to students in a class. It's designed to make classroom assessments easy and efficient.</div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="https://www.figma.com/design/exrpduTELNHube4i3vH0zW/VETConnect--MAIN?node-id=0-1&t=wChquF38gB8eEHCr-1" target="_blank" rel="noopener">
+                        <img src="./img/vetconnect.png" alt="VetConnect">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">VetConnect</div>
+                        <div class="card-desc">Is a platform for dogs and cats where we made automated record tracking for every medical record of animals, helping owners and veterinarians to maintain accurate health information.</div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="https://www.figma.com/design/f3x1s6oa0NgkCFG47hHk2d/AssetWise-Prototype-(Copy)?node-id=0-1&t=s7iiLt7ajpVDwIHL-1" target="_blank" rel="noopener">
+                        <img src="./img/proj5.png" alt="AssetWise">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">AssetWise</div>
+                        <div class="card-desc">Is designed for BJMP Region 3 officers to track and record every personnel's information, including work and assignment records. It aims to streamline officer management and operations.</div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <a href="https://www.figma.com/design/GcGqoKWxlOukVzfAZQFCPJ/Meditech?node-id=1-1821&t=pNzFeqsXcK0FE4lL-1" target="_blank" rel="noopener">
+                        <img src="./img/meditech.png" alt="Meditech">
+                    </a>
+                    <div class="card-content">
+                        <div class="card-title">MediTech</div>
+                        <div class="card-desc">Is a mobile app that allows patients to book appointments with doctors, track medical records, and get updates on upcoming check-ups. It provides an easy way for patients to stay on top of their health.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     </section>
 
     <!--Footer-->
@@ -147,10 +206,6 @@
     
 </body>
 
-<script>
-    function toggleMenu() {
-        document.querySelector(".navbar ul").classList.toggle("show");
-    }
-</script>
+<script src="index.js"></script>
 
 </html>
