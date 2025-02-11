@@ -56,7 +56,7 @@ function deleteRole() {
 typeRole(); 
 
 
-
+// About page | slide message
 var slideIndex = 1;
 showSlides(slideIndex);
 
