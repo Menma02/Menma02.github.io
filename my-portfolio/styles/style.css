@@ -54,11 +54,11 @@ h1 a {
 }
 
 .logo h1 span {
-    color: #FD7014;
+    color: #F0A04B;
 }
 
 h1 a:hover {
-    color: #FD7014;
+    color: #F0A04B;
 }
 
 /* Navbar styling */
@@ -88,7 +88,7 @@ h1 a:hover {
 }
 
 .navbar ul li a:hover {
-    color: #FD7014; 
+    color: #F0A04B; 
 }
 
 /* Social Media Icons */
@@ -117,7 +117,7 @@ h1 a:hover {
 }
 
 .socials-container ul li a:hover {
-    color: #FD7014; 
+    color: #F0A04B; 
 }
 
 .socials-mobile{
@@ -142,20 +142,20 @@ h1 a:hover {
 }
 
 .resume-btn {
-    background-color: #393E46;
+    background-color: #0B192C;
     margin-top: 40px;
     color: #EEEEEE;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 15px;
-    border: 3px solid #FD7014;
+    border: 3px solid #F0A04B;
   }
   .resume-btn i{
     margin-right: 8px;
   }
   
   .resume-btn:hover {
-    background-color: #FD7014;
+    background-color: #F0A04B;
     transition: 0.3s;
   }
 
@@ -169,11 +169,11 @@ h1 a:hover {
 }
 
 h2 span {
-    color: #FD7014;
+    color: #F0A04B;
 }
 
 .welcome-container p span {
-    color: #FD7014;
+    color: #F0A04B;
 }
 .name {
     position: relative;
@@ -192,11 +192,11 @@ h2 span {
 
 .name .outline {
     color: transparent;
-    -webkit-text-stroke: 2px #FD7014;
+    -webkit-text-stroke: 2px #F0A04B;
 }
 
 .name .filled {
-    color: #FD7014;
+    color: #F0A04B;
     animation: animate 4s ease-in-out infinite;
 }
 
@@ -240,7 +240,7 @@ h2 span {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 5px solid #FD7014;
+    border: 5px solid #F0A04B;
     left: -40px;
     top: 30px; 
     z-index: 0; 
@@ -248,29 +248,49 @@ h2 span {
 
 .about-img img {
     border-radius: 50%;
-    border: 5px solid #FD7014;
+    border: 5px solid #F0A04B;
     position: relative;
     z-index: 2; 
 }
-
 
 .about-desc {
     max-width: 60%;
     padding: 20px;
     margin: 30px;
 }
-.about-desc h2{
+.liner {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.liner::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: #F0A04B;
+    min-width: 20px;
+    margin-left: 20px;
+}
+
+/* Style for the "Me" text */
+.liner .highlight {
+    color: #F0A04B; 
+    margin: 10px;
+}
+
+.about-desc h2 {
     font-size: 70px;
     text-shadow: 0px 5px 8px #222831;
-}   
+}
 
 .about-desc p span{
-    color: #FD7014;
+    color: #F0A04B;
     font-size: 30px;
 }
 
 #role {
-    border-right: 2px solid #FD7014;
+    border-right: 2px solid #F0A04B;
     display: inline;
     color: #EEEEEE;
     font-size: 2rem;
@@ -281,14 +301,14 @@ h2 span {
 
   @keyframes blink {
     0%, 50% {
-      border-color: #FD7014;
+      border-color: #F0A04B;
     }
     51%, 100% {
       border-color: transparent;
     }
   }
   .more-link {
-    color: #FD7014;
+    color: #F0A04B;
     text-decoration: none;
     display: inline-flex; 
     align-items: center;  
@@ -318,7 +338,7 @@ h3{
 }
 
 h3 span {
-    color: #FD7014;
+    color: #F0A04B;
 }
 
 /* Tabs Styling */
@@ -340,10 +360,10 @@ h3 span {
     transition: color 0.3s ease;
 }
 .tab-btn.active {
-    color: #FD7014;
-    border-top: 4px solid #FD7014; /* Top border */
-    border-left: 4px solid #FD7014; 
-    border-right: 4px solid #FD7014; 
+    color: #F0A04B;
+    border-top: 4px solid #F0A04B; /* Top border */
+    border-left: 4px solid #F0A04B; 
+    border-right: 4px solid #F0A04B; 
 }
 .tab-content {
     display: none; 
@@ -354,7 +374,7 @@ h3 span {
     display: block;
 }
 .tab-btn:hover{
-    color: #FD7014;
+    color: #F0A04B;
 }
 
 /* Card Styling */
@@ -378,7 +398,7 @@ h3 span {
 .card:hover {
     transform: translateY(-5px);
     transition: 0.3s;
-    box-shadow: 0px 0px 12px #FD7014;
+    box-shadow: 0px 0px 12px #F0A04B;
 }
 .card img {
     width: 100%;
@@ -392,7 +412,7 @@ h3 span {
 .card-title {
     font-size: 18px;
     font-weight: bold;
-    color: #FD7014;
+    color: #F0A04B;
     margin-bottom: 5px;
     text-align: left;
 }
@@ -406,7 +426,7 @@ h3 span {
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
-    color: #FD7014;
+    color: #F0A04B;
     text-decoration: none;
 }
 
@@ -536,7 +556,7 @@ h3 span {
     }
 
     .socials-mobile a:hover {
-        color: #FD7014;
+        color: #F0A04B;
     }
 
     .hero-container {
@@ -599,11 +619,11 @@ h3 span {
         font-size: 40px;
     }
     .tabs{
-        justify-content: center;
+        justify-content: left;
     }
     .tab-btn{
-        padding: 5px 10px;
-        font-size: 12px;
+        padding: auto;
+        font-size: 14px;
         text-align: center;
     }
     .card-container {

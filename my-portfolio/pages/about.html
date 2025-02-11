@@ -11,19 +11,102 @@
     <title>Mark June's Portfolio</title>
 </head>
 <body>
-    <div class="about-container">
-        <div class="about-img">
-            <div class="circle-shape"></div>
-            <img src="./img/MARKJUNE.png" alt="Mark June" width="300px">
+    <nav class="navbar-container">
+        <div class="logo">
+            <h1><a href="/index.html">MJDS<span>.</span></a></h1>
         </div>
-        <div class="about-desc">
-            <h2>About <span>Me</span></h2>
-            <p>As an inspiring <span> frontend developer</span> and <span>UI/UX designer</span>, I am a creative individual with a background in UI/UX design and 
-            proficiency in using Figma to develop engaging prototypes. I am eager to grow as a designer and developer, having completed 
-            various commissions to enhance my technical skills. I look forward to applying my design and development experience in a new role while continuing to learn and evolve in the field.</p>
-        </div> 
-    </div>
     
+        <!-- Hamburger Button -->
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                
+                <!-- Social Icons (Mobile) - Hidden on larger screens -->
+                <li class="socials-mobile">
+                    <a href="mailto:santiago.markjune.bsit@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Social Icons (Desktop & Tablet) -->
+        <div class="socials-container">
+            <ul>
+                <li><a href="mailto:santiago.markjune.bsit@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/yourprofile" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <section class="about-container">
+        <!-- Left Column -->
+        <div class="about-left">
+            <div class="description">
+                <p class="welcome-message">Hi<span>,</span> I'm</p>
+                <h1 class="my-name">Mark June D. Santiago</h1>
+                <p>Bulacan, <span>Philippines</span></p>
+            </div>
+            
+            <button class="resume-btn">
+                <i class="fa fa-download" style="color:#EEEEEE;"></i> My Resume </button>
+  
+        </div>
+    
+        <div class="about-middle">
+            <div class="my-image">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <img src="../img/me.png" alt="my picture">
+            </div>
+        </div>
+        
+    
+        <!-- Right Column -->
+        <div class="about-right">
+            <div class="describe-container">
+                <div class="describe-me">
+                    <p class="mySlides active"><strong class="title-describe liner">My Hobbies</strong><br> I love watching movies, anime, and random 
+                        online videos that make me laugh and help me unwind. Whether it’s a funny clip, a good story, 
+                        or just something entertaining, it’s my way to relax and de-stress.</p>
+                    
+                    <p class="mySlides"><strong class="title-describe liner">My Family</strong><br> I have six siblings—three from my mother's side 
+                        and two from my father's side. However, I have one biological brother. Despite these differences, we all remain connected 
+                        to each other</p>
+                    
+                    <p class="mySlides"><strong class="title-describe liner">My Passin</strong> I'm passionate about creating intuitive and visually 
+                        appealing user interfaces using HTML, CSS, and JavaScript. I enjoy exploring UI/UX trends, optimizing web performance, and 
+                        refining my design skills in Figma. Outside of tech, I love gaming, musics, and finding new design inspirations.</p>
+                    
+                    <p class="mySlides"><strong class="title-describe liner">Qoute in Life</strong>"Failing doesn’t give you a reason to give up, 
+                        as long as you believe." – Naruto Uzumaki</p>
+                </div>
+                
+                
+                <!-- Dot Navigation -->
+                <div class="dot-container">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="tech-skills">
+            <h2>Tech <span>Stack</span></h2>
+
+            
+    </div>
+
+    <script src="../index.js"></script>
 </body>
-<script src="/index.js"></script>
+
 </html>
