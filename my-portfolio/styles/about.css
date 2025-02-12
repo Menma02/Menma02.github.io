@@ -79,17 +79,40 @@ h1 a:hover {
 }
 
 .navbar ul li a {
+    position: relative;
     color: #EEEEEE;
     text-decoration: none;
     font-size: 20px;
     margin: 30px;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
     color: #F0A04B; 
 }
+
+/* Active State */
+.navbar ul li a.active {
+    color: #F0A04B;
+    font-weight: bold;
+    border-bottom: 2px solid #F0A04B;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #F0A04B;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Slide in from left to right */
+}
+
 
 /* Social Media Icons */
 .socials-container {
@@ -199,35 +222,52 @@ h1 a:hover {
 .my-image img {
     width: 100%;
     height: auto;
-    border-radius: 100%;
+    border-radius: 50%;
     z-index: 2; 
 }
 
-/* Background Circles */
+/* Background Circles with Echo Effect */
 .circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(240, 160, 75, 0.1); 
-    z-index: 1;
+    background: #F0A04B80; 
+    z-index: -1;
+    pointer-events: none;
+    animation: echoEffect 4s infinite;
+}
+
+.circle-1, .circle-2, .circle-3 {
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .circle-1 {
-    width: 320px;
-    height: 320px;
-    background: rgba(240, 160, 75, 0.15);
+    animation-delay: 0s;
 }
 
 .circle-2 {
-    width: 380px;
-    height: 380px;
-    background: rgba(240, 160, 75, 0.1);
+    animation-delay: 1.5s;
 }
 
 .circle-3 {
-    width: 450px;
-    height: 450px;
-    background: rgba(240, 160, 75, 0.05);
+    animation-delay: 3s;
 }
+
+@keyframes echoEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+
 
 .about-right {
     display: flex;

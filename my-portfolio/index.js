@@ -3,6 +3,25 @@ function toggleMenu() {
     document.querySelector(".navbar ul").classList.toggle("show");
 }
 
+// Get all links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Get current URL path
+const currentPath = window.location.pathname;
+
+// Loop through each link
+navLinks.forEach(link => {
+    const linkHref = link.getAttribute('href');
+
+    // Check if the current URL ends with the link's href
+    if (currentPath.endsWith(linkHref) || 
+        (linkHref.endsWith('index.html') && (currentPath === '/' || currentPath.endsWith('index.html')))) {
+        link.classList.add('active');
+    }
+});
+
+
+
 // Project Tab
 function openTab(tabId, button) {
     // Hide all tab contents
